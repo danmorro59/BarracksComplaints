@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
-
+import Home from './Components/Home'
+import Login from './Components/Login';
+import Admin from './Components/Admin'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [login, setLogin] = useState(false)
+  const [input, setUserInput] = useState('')
+  const handleSubmit = (e) => {
+    setUserInput(input)
+  }
+  
+  
+  if(!login){
+    return <Home setLogin={setLogin} />
+  }return <Login setLogin={setLogin} input={input} setUserInput={setUserInput} handleSubmit={handleSubmit}/>
 }
 
 export default App;

@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Gajraj+One&display=swap');
+h1{
+  font-family: 'Gajraj One', cursive;
+  text-decoration: underline;
+  font-size: 50px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: dimgrey;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
+}
+
+#homeBtn{
+  border-right: 1px solid black;
+}
+
+.homeForm{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 400px;
+  height: 350px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(61, 61, 61);
+  opacity: 80%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.homeCont{
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#homeInput{
+  margin-bottom: 20px;
+  border: 2px inset;
+  outline: none;
+  border-radius: 10px;
+}
+
+li:hover{
+  cursor: pointer;
+  color: white;
+}
+
+.homeSubmit:hover{
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.homeSubmit{
+  width: 100px;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+img{
+  height: 130px;
+  width: 130px;
+  float: right;
+}
+
+.loginCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.loginForm{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 400px;
+  height: 350px;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(61, 61, 61);
+  opacity: 80%;
+  color: white;
+}
+
+#backBtn{
+  float: left;
+  margin-top: 30px;
+}
+
+#backBtn{
+  cursor: pointer;
+}
+
+#loginSubmit:hover{
+  cursor: pointer;
+}
+#completed{
+  float: right;
+  background: none;
+  border: none;
+  font-size: 20px;
+  text-decoration: underline;
+}
+#completed:hover{
+  color: white;
+  cursor: pointer;
+}
+
+#backToPending{
+  float: left;
+  background: none;
+  border: none;
+}
+
+#backToPending:hover{
+  color: white;
+}
+
+.itemContainer{
+  margin-top: 20px;
+}
+
+.pDiv{
+  display: flex;
+  align-items: baseline;
+}
+
+.btnDiv{
+  margin-left: 20px;
+}
+
+i{
+  background-color: transparent;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.pendingBtnsUpdate{
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background:none;
+}
+.pendingBtnsUpdate:hover{
+  background-color: chartreuse;
+}
+
+.pendingBtnsDelete:hover{
+  background-color: red;
+}
+
+.pendingBtnsDelete{
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background:none;
+}
+
+.submittedContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submittedBackBtn{
+  color: white;
+  margin-top: 100px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: black;
+  width: 100px;
+  height: 50px;
+  font-size: larger;
+}
+
+.submittedBackBtn:hover{
+  background-color: dimgrey;
+  color: black;
+}
+
+.pendingDivContainer{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theComplaints{
+  text-decoration: underline;
+}
+
+.theComplete{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
