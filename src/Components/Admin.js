@@ -13,13 +13,13 @@ const Admin = ({setLogin}) => {
   
   
   useEffect(() => {
-    fetch('http://localhost:5001/complaints')
+    fetch('/complaints')
       .then(response => response.json())
       .then(data => setData(data));
   }, []);
   
   useEffect(() => {
-    fetch('http://localhost:5001/completed')
+    fetch('/completed')
       .then(response => response.json())
       .then(data => setComplete(data));
   }, []);
