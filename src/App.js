@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './App.css';
 import Home from './Components/Home'
 import Login from './Components/Login';
-import Admin from './Components/Admin'
+
 function App() {
   const [login, setLogin] = useState(false)
   const [input, setUserInput] = useState('')

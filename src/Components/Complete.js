@@ -16,6 +16,7 @@ const Complete = ({complete, setComplete}) => {
   
     return(
       <div className='theComplete'>
+        <h1>Completed</h1>
       {  complete.map(item => (
           <div key={item.id} className="theComplaints">
             <div className='pDiv'>

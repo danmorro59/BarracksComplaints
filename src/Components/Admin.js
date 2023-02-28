@@ -10,7 +10,7 @@ const Admin = ({setLogin}) => {
   const [data, setData] = useState([]);
   const [complete, setComplete] = useState([])
   const [updated, setUpdate] = useState(false)
-  const [deleted, setDelete] = useState(false)
+  
   
   useEffect(() => {
     fetch('http://localhost:5001/complaints')
