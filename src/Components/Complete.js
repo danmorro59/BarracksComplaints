@@ -3,7 +3,7 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 const Complete = ({complete, setComplete}) => {
   const handleDelete = (id) => {
-    fetch(`http://localhost:5001/complaints/${id}`, {
+    fetch(`/complaints/${id}`, {
       method: 'DELETE',
     })
     .then(response => response.json())

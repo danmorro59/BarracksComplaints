@@ -1,18 +1,29 @@
 const dotenv = require('dotenv')
+const path = require('path')
 const express = require('express')
 const app = express()
 const cors = require('cors')
 dotenv.config()
+app.use(express.static(path.join(__dirname, "build")));
 
+app.use(cors())
+app.use(express.static('public'))
+app.use(express.json())
 const Pool = require('pg').Pool
 const port = process.env.PORT || 5000
 const client = new Pool({ 
   connectionString: process.env.DATABASE_URL 
 });
 
-app.use(cors())
-app.use(express.static('public'))
-app.use(express.json())
+app.get("/", (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send(error);
+  }
+});
+
 
 app.route('/complaints')
   .get(async (req, res)=>{

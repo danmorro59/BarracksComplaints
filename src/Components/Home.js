@@ -15,7 +15,7 @@ const Home = ({setLogin}) => {
     setSubmit(true)
     try {
       const body = {name, room, description, contact}
-      const response = await fetch('http://localhost:5001/complaints',
+      const response = await fetch('/complaints',
         {
           method: "POST",
           headers: {"Content-Type": "application/json" },

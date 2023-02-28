@@ -8,7 +8,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Pending = ({data, setData}) => {
   const handleDelete = (id) => {
-    fetch(`http://localhost:5001/complaints/${id}`, {
+    fetch(`/complaints/${id}`, {
       method: 'DELETE',
     })
     .then(response => response.json())
@@ -20,7 +20,7 @@ const Pending = ({data, setData}) => {
   }
 
   const handleUpdate = (id) => {
-    fetch(`http://localhost:5001/complaints/${id}`, {
+    fetch(`/complaints/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
