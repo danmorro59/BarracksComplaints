@@ -10,7 +10,7 @@ app.use(cors())
 //app.use(express.static('public'))
 app.use(express.json())
 const Pool = require('pg').Pool
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 6000
 const client = new Pool({ 
   connectionString: process.env.DATABASE_URL 
 });
@@ -77,4 +77,6 @@ app.route('/complaints')
       }
     })
 
-  app.listen(5001)
+  app.listen(port, ()=>{
+    console.log(`Listening on ${port}`)
+  })
