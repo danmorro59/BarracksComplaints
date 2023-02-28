@@ -7,7 +7,7 @@ dotenv.config()
 app.use(express.static(path.join(__dirname, "build")));
 
 app.use(cors())
-app.use(express.static('public'))
+//app.use(express.static('public'))
 app.use(express.json())
 const Pool = require('pg').Pool
 const port = process.env.PORT || 5000
